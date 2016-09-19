@@ -1,3 +1,4 @@
+/asset/data/sample.csv
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -23,6 +24,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+/asset/train
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
