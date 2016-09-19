@@ -8,11 +8,6 @@ to one dimensional time series data for classifying time series data through uns
 1. tensorflow >= rc0.10 
 1. [sugartensor](https://github.com/buriburisuri/sugartensor) >= 0.0.1
 
-## Dependencies
-
-1. tensorflow >= rc0.10 
-1. [sugartensor](https://github.com/buriburisuri/sugartensor) >= 0.0.1
-
 ## Sample Data
 
 Unfortunately, I cannot share sample time series data but you can use any csv formatted time series data as following.
