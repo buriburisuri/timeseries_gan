@@ -35,6 +35,9 @@ class TimeSeriesData(object):
         self.num_batch = X.shape[0] // batch_size
 
 
+        self.X = tf.to_float(self.X)
+
+
 # set log level to debug
 tf.sg_verbosity(10)
 
@@ -59,7 +62,7 @@ x = data.X
 y = tf.ones(batch_size, dtype=tf.sg_floatx)
 
 # discriminator labels ( half 1s, half 0s )
-y_disc = tf.concat(0, [y, y * 0])
+y_disc = tf.concat([y, y * 0], 0)
 
 
 #
@@ -87,9 +90,10 @@ with tf.sg_context(name='generator', size=(4, 1), stride=(2, 1), act='relu', bn=
 #
 # create discriminator & recognizer
 #
-
+print x
+print  gen
 # create real + fake image input
-xx = tf.concat(0, [x, gen])
+xx = tf.concat([x, gen], 0)
 
 with tf.sg_context(name='discriminator', size=(4, 1), stride=(2, 1), act='leaky_relu'):
     # shared part
